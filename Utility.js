@@ -1,4 +1,5 @@
 class Utility{
+    // Check employee is present or not
     checkEmpAttendence(){
         var check = Math.round(Math.random() *1);
         if(check === 0){
