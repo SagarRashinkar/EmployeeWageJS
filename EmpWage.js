@@ -1,4 +1,4 @@
 const util = require('./Utility');
 
-// Checking attendence of employee
+// Daily Employee Wage
 util.checkEmpAttendence();
