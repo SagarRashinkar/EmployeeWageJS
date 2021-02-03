@@ -1,4 +1,4 @@
 const util = require('./Utility');
 
-//Store daily wage in array and print that
+//Store day, daily wage and totalwage
 util.empWageCal();
