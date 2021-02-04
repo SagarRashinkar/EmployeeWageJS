@@ -1,4 +1,4 @@
 const util = require('./Utility');
 
-//Store day, daily wage and totalwage
+//Using the filter function
 util.empWageCal();
