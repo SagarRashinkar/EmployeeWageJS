@@ -27,7 +27,19 @@ class EmployeePayRoll{
         this._id = id;
     }
     set name(name){
-        this._name = name;
+        try{
+            var pat = RegExp("^[A-Z][1][a-zA-Z]{2,}")
+            if(pat.test(name)){
+                this._name = name;
+            }
+            else{
+                throw "Enter a valid name!!!";
+            }
+        }
+        catch(err) {
+            console.error(err);
+        }
+        
     }
     set salary(salary){
         this._salary = salary;
@@ -39,11 +51,11 @@ class EmployeePayRoll{
         this._date = date;
     }
 }
-let empId = userInput.questionInt("Enter Id: ");
-let empName = userInput.question("Enter name: ");
-let empSal = userInput.questionInt("Enter salary: ");
+let id = userInput.questionInt("Enter Id: ");
+let name = userInput.question("Enter name: ");
+let salary = userInput.questionInt("Enter salary: ");
 let gender = userInput.question("Enter your gender: ");
 let date = userInput.question("Enter start date: ");
-let empPayRoll = new EmployeePayRoll(empId, empName, empSal, gender, date);
+let empPayRoll = new EmployeePayRoll(id, name, salary, gender, date);
 console.log("Employee PayRoll Data: ");
 console.log(empPayRoll._id+" "+empPayRoll._name+" "+empPayRoll._salary+" "+empPayRoll._gender+" "+empPayRoll._date);
